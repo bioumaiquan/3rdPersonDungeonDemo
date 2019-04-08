@@ -1,0 +1,4 @@
+sceneSetups:
+- path: Assets/Invector-3rdPersonController/Basic Locomotion LITE/vThirdPersonController-Demo.unity
+  isLoaded: 1
+  isActive: 1
