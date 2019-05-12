@@ -377,12 +377,9 @@ ModelImporter:
     rigImportErrors: 
     rigImportWarnings: "Copied Avatar Rig Configuration mis-match. Bone length in
       copied configuration does not match position in animation file:\n\t'Hip_L' :
-      position error = 10.274498 mm\n\t'Ankle_L' : position error = 1.996447 mm\n"
+      position error = 10.547441 mm\n\t'Ankle_L' : position error = 2.049482 mm\n"
     animationImportErrors: 
-    animationImportWarnings: "\nClip 'Anim@Bye' has import animation warnings that
-      might lower retargeting quality:\nNote: Activate translation DOF on avatar to
-      improve retargeting quality.\n\t'RootPart1_M' is inbetween humanoid transforms
-      and has rotation animation that will be discarded.\n"
+    animationImportWarnings: 
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
     importAnimatedCustomProperties: 0
@@ -844,7 +841,7 @@ ModelImporter:
         value: {x: 0, y: 0, z: 0}
         length: 0
         modified: 0
-    - boneName: Spine1_M
+    - boneName: RootPart1_M
       humanName: Spine
       limit:
         min: {x: 0, y: 0, z: 0}
@@ -852,7 +849,7 @@ ModelImporter:
         value: {x: 0, y: 0, z: 0}
         length: 0
         modified: 0
-    - boneName: Chest_M
+    - boneName: Spine1_M
       humanName: Chest
       limit:
         min: {x: 0, y: 0, z: 0}
@@ -1190,6 +1187,14 @@ ModelImporter:
         modified: 0
     - boneName: PinkyFinger3_R
       humanName: Right Little Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Chest_M
+      humanName: UpperChest
       limit:
         min: {x: 0, y: 0, z: 0}
         max: {x: 0, y: 0, z: 0}

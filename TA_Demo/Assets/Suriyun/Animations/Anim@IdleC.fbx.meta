@@ -1,7 +1,9 @@
 fileFormatVersion: 2
 guid: 418b6671ff23ee541863fd30811c514c
+timeCreated: 1493702341
+licenseType: Store
 ModelImporter:
-  serializedVersion: 23
+  serializedVersion: 19
   fileIDToRecycleName:
     100000: //RootNode
     100002: Ankle_L
@@ -176,6 +178,63 @@ ModelImporter:
     100340: ToesEnd_R
     100342: Wrist_L
     100344: Wrist_R
+    100346: catearL1
+    100348: catearL2
+    100350: catearR1
+    100352: catearR2
+    100354: ClaymoreA
+    100356: Eye1_L
+    100358: Eye1_R
+    100360: nurbsCircle16
+    100362: nurbsCircle20
+    100364: nurbsCircle22
+    100366: nurbsCircle24
+    100368: nurbsCircle26
+    100370: nurbsCircle6
+    100372: Root_catear
+    100374: Root_wing
+    100376: w1
+    100378: w10
+    100380: w11
+    100382: w12
+    100384: w13
+    100386: w14
+    100388: w15
+    100390: w16
+    100392: w17
+    100394: w18
+    100396: w19
+    100398: w2
+    100400: w20
+    100402: w21
+    100404: w22
+    100406: w23
+    100408: w24
+    100410: w25
+    100412: w26
+    100414: w27
+    100416: w28
+    100418: w29
+    100420: w3
+    100422: w30
+    100424: w31
+    100426: w32
+    100428: w33
+    100430: w34
+    100432: w35
+    100434: w36
+    100436: w37
+    100438: w38
+    100440: w39
+    100442: w7
+    100444: w8
+    100446: w9
+    100448: wt4
+    100450: wt5
+    100452: wt6
+    100454: wt7
+    100456: wt8
+    100458: wt9
     400000: //RootNode
     400002: Ankle_L
     400004: Ankle_R
@@ -349,6 +408,63 @@ ModelImporter:
     400340: ToesEnd_R
     400342: Wrist_L
     400344: Wrist_R
+    400346: catearL1
+    400348: catearL2
+    400350: catearR1
+    400352: catearR2
+    400354: ClaymoreA
+    400356: Eye1_L
+    400358: Eye1_R
+    400360: nurbsCircle16
+    400362: nurbsCircle20
+    400364: nurbsCircle22
+    400366: nurbsCircle24
+    400368: nurbsCircle26
+    400370: nurbsCircle6
+    400372: Root_catear
+    400374: Root_wing
+    400376: w1
+    400378: w10
+    400380: w11
+    400382: w12
+    400384: w13
+    400386: w14
+    400388: w15
+    400390: w16
+    400392: w17
+    400394: w18
+    400396: w19
+    400398: w2
+    400400: w20
+    400402: w21
+    400404: w22
+    400406: w23
+    400408: w24
+    400410: w25
+    400412: w26
+    400414: w27
+    400416: w28
+    400418: w29
+    400420: w3
+    400422: w30
+    400424: w31
+    400426: w32
+    400428: w33
+    400430: w34
+    400432: w35
+    400434: w36
+    400436: w37
+    400438: w38
+    400440: w39
+    400442: w7
+    400444: w8
+    400446: w9
+    400448: wt4
+    400450: wt5
+    400452: wt6
+    400454: wt7
+    400456: wt8
+    400458: wt9
     2300000: Brow
     2300002: cheek
     2300004: Eye
@@ -372,13 +488,10 @@ ModelImporter:
     4300012: Brow
     7400000: IdleC
     9500000: //RootNode
-    2186277476908879412: ImportLogs
-  externalObjects: {}
   materials:
     importMaterials: 0
     materialName: 0
     materialSearch: 1
-    materialLocation: 0
   animations:
     legacyGenerateAnimations: 4
     bakeSimulation: 0
@@ -386,31 +499,23 @@ ModelImporter:
     optimizeGameObjects: 0
     motionNodeName: 
     rigImportErrors: 
-    rigImportWarnings: "Copied Avatar Rig Configuration mis-match. Bone length in
-      copied configuration does not match position in animation file:\n\t'Hip_L' :
-      position error = 10.274463 mm\n\t'Ankle_L' : position error = 1.996697 mm\n"
+    rigImportWarnings: 
     animationImportErrors: 
-    animationImportWarnings: "\nClip 'Aki@IdleC' has import animation warnings that
-      might lower retargeting quality:\nNote: Activate translation DOF on avatar to
-      improve retargeting quality.\n\t'Elbow_R' has translation animation that will
-      be discarded.\n"
+    animationImportWarnings: 
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
-    importAnimatedCustomProperties: 0
-    importConstraints: 0
     animationCompression: 3
     animationRotationError: 0.5
     animationPositionError: 0.5
     animationScaleError: 0.5
     animationWrapMode: 0
     extraExposedTransformPaths: []
-    extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
       name: IdleC
       takeName: Aki@IdleC
-      firstFrame: 2
-      lastFrame: 100
+      firstFrame: 1901
+      lastFrame: 2000
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -766,34 +871,22 @@ ModelImporter:
     globalScale: 13
     meshCompression: 0
     addColliders: 0
-    useSRGBMaterialColor: 1
-    importVisibility: 0
     importBlendShapes: 1
-    importCameras: 0
-    importLights: 0
     swapUVChannels: 0
     generateSecondaryUV: 0
     useFileUnits: 1
     optimizeMeshForGPU: 1
     keepQuads: 0
     weldVertices: 1
-    preserveHierarchy: 0
-    indexFormat: 1
     secondaryUVAngleDistortion: 8
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
     secondaryUVPackMargin: 4
     useFileScale: 1
-    previousCalculatedGlobalScale: 0.13
-    hasPreviousCalculatedGlobalScale: 1
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0
     tangentImportMode: 3
-    normalCalculationMode: 0
-    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 1
-    blendShapeNormalImportMode: 1
-    normalSmoothingSource: 0
   importAnimation: 1
   copyAvatar: 1
   humanDescription:
@@ -855,7 +948,7 @@ ModelImporter:
         value: {x: 0, y: 0, z: 0}
         length: 0
         modified: 0
-    - boneName: Spine1_M
+    - boneName: RootPart1_M
       humanName: Spine
       limit:
         min: {x: 0, y: 0, z: 0}
@@ -863,7 +956,7 @@ ModelImporter:
         value: {x: 0, y: 0, z: 0}
         length: 0
         modified: 0
-    - boneName: Chest_M
+    - boneName: Spine1_M
       humanName: Chest
       limit:
         min: {x: 0, y: 0, z: 0}
@@ -1201,6 +1294,14 @@ ModelImporter:
         modified: 0
     - boneName: PinkyFinger3_R
       humanName: Right Little Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Chest_M
+      humanName: UpperChest
       limit:
         min: {x: 0, y: 0, z: 0}
         max: {x: 0, y: 0, z: 0}
@@ -2031,6 +2132,7 @@ ModelImporter:
     legStretch: 0.05
     feetSpacing: 0
     rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
     hasTranslationDoF: 0
     hasExtraRoot: 1
     skeletonHasParents: 0

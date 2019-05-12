@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: dd4fe296533713342b6bc2ebe4faedbd
-timeCreated: 1481254078
+timeCreated: 1493444146
 licenseType: Store
 ModelImporter:
   serializedVersion: 19
@@ -364,6 +364,8 @@ ModelImporter:
     resampleCurves: 1
     optimizeGameObjects: 0
     motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
     animationImportErrors: 
     animationImportWarnings: 
     animationRetargetingWarnings: 
@@ -458,7 +460,7 @@ ModelImporter:
         value: {x: 0, y: 0, z: 0}
         length: 0
         modified: 0
-    - boneName: Spine1_M
+    - boneName: RootPart1_M
       humanName: Spine
       limit:
         min: {x: 0, y: 0, z: 0}
@@ -466,7 +468,7 @@ ModelImporter:
         value: {x: 0, y: 0, z: 0}
         length: 0
         modified: 0
-    - boneName: Chest_M
+    - boneName: Spine1_M
       humanName: Chest
       limit:
         min: {x: 0, y: 0, z: 0}
@@ -804,6 +806,14 @@ ModelImporter:
         modified: 0
     - boneName: PinkyFinger3_R
       humanName: Right Little Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Chest_M
+      humanName: UpperChest
       limit:
         min: {x: 0, y: 0, z: 0}
         max: {x: 0, y: 0, z: 0}
