@@ -83,6 +83,7 @@
     <Compile Include="Assets\My3rdPerson\Scripts\CharacterStates.cs" />
     <Compile Include="Assets\My3rdPerson\Scripts\GlobalDepthVariable.cs" />
     <Compile Include="Assets\My3rdPerson\Scripts\GlobalShaderParam.cs" />
+    <Compile Include="Assets\My3rdPerson\Scripts\LightScaler.cs" />
     <Compile Include="Assets\My3rdPerson\Scripts\ShaderLodPanel.cs" />
     <Compile Include="Assets\My3rdPerson\Scripts\ShaderUniforms.cs" />
     <Compile Include="Assets\Suriyun\Scripts\AnimatorController.cs" />
