@@ -106,6 +106,20 @@ public class vThirdPersonCamera : MonoBehaviour
     {
         if (target == null || targetLookAt == null) return;
 
+        if (Input.mouseScrollDelta.y != 0)
+        {
+            if (Input.mouseScrollDelta.y < 0)
+            {
+                defaultDistance += 0.3f;
+            }
+            else
+            {
+                defaultDistance -= 0.3f;
+            }
+
+            defaultDistance = Mathf.Clamp(defaultDistance, 1f, 5f);
+        }
+
         CameraMovement();
     }
 
@@ -184,8 +198,8 @@ public class vThirdPersonCamera : MonoBehaviour
         current_cPos = currentTargetPos + new Vector3(0, currentHeight, 0);
         RaycastHit hitInfo;
 
-        ClipPlanePoints planePoints = _camera.NearClipPlanePoints(current_cPos + (camDir * (distance)), clipPlaneMargin);
-        ClipPlanePoints oldPoints = _camera.NearClipPlanePoints(desired_cPos + (camDir * distance), clipPlaneMargin);
+        ////ClipPlanePoints planePoints = _camera.NearClipPlanePoints(current_cPos + (camDir * (distance)), clipPlaneMargin);
+        ////ClipPlanePoints oldPoints = _camera.NearClipPlanePoints(desired_cPos + (camDir * distance), clipPlaneMargin);
 
         //Check if Height is not blocked 
         if (Physics.SphereCast(targetPos, checkHeightRadius, Vector3.up, out hitInfo, cullingHeight + 0.2f, cullingLayer))
@@ -197,7 +211,7 @@ public class vThirdPersonCamera : MonoBehaviour
         }
 
         //Check if desired target position is not blocked       
-        if (CullingRayCast(desired_cPos, oldPoints, out hitInfo, distance + 0.2f, cullingLayer, Color.blue))
+        if (CullingRayCast(desired_cPos, _camera.transform.position, out hitInfo, distance + 0.2f, cullingLayer, Color.blue))
         {
             distance = hitInfo.distance - 0.2f;
             if (distance < defaultDistance)
@@ -214,7 +228,7 @@ public class vThirdPersonCamera : MonoBehaviour
             currentHeight = height;
         }
         //Check if target position with culling height applied is not blocked
-        if (CullingRayCast(current_cPos, planePoints, out hitInfo, distance, cullingLayer, Color.cyan)) distance = Mathf.Clamp(cullingDistance, 0.0f, defaultDistance);
+        if (CullingRayCast(current_cPos, _camera.transform.position, out hitInfo, distance, cullingLayer, Color.cyan)) distance = Mathf.Clamp(cullingDistance, 0.0f, defaultDistance);
         var lookPoint = current_cPos + targetLookAt.forward * 2f;
         lookPoint += (targetLookAt.right * Vector3.Dot(camDir * (distance), targetLookAt.right));
         targetLookAt.position = current_cPos;
@@ -267,6 +281,19 @@ public class vThirdPersonCamera : MonoBehaviour
         {
             value = true;
             if (cullingDistance > hitInfo.distance) cullingDistance = hitInfo.distance;
+        }
+
+        return value;
+    }
+
+    bool CullingRayCast(Vector3 from, Vector3 to, out RaycastHit hitInfo, float distance, LayerMask cullingLayer, Color color)
+    {
+        bool value = false;
+
+        if (Physics.Raycast(from, to - from, out hitInfo, distance, cullingLayer))
+        {
+            value = true;
+            cullingDistance = hitInfo.distance;
         }
 
         return value;

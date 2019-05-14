@@ -11222,6 +11222,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Eri_schooluniform_v2
       objectReference: {fileID: 0}
+    - target: {fileID: 1759019575471456, guid: 13785263be6a9934593a7e4ebe059f3c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4029499644838236, guid: 13785263be6a9934593a7e4ebe059f3c, type: 3}
       propertyPath: m_LocalPosition.x
       value: 7.39
@@ -11252,7 +11256,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4029499644838236, guid: 13785263be6a9934593a7e4ebe059f3c, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4029499644838236, guid: 13785263be6a9934593a7e4ebe059f3c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -16987,7 +16991,7 @@ Transform:
   - {fileID: 1819552473}
   - {fileID: 1409089485}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1703433849
 GameObject:
@@ -20232,7 +20236,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 148850, guid: ee2d107a34692a64e95ce85aed5e41f0, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 469886, guid: ee2d107a34692a64e95ce85aed5e41f0, type: 3}
       propertyPath: m_LocalPosition.x

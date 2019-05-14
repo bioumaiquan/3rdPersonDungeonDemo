@@ -840,4 +840,6 @@ MonoBehaviour:
   assetList:
   - Assets/Bakery/examples/content/sponza/bush.FBX
   - Assets/Bakery/examples/content/floor_lamp.FBX
-  uvOverlapAssetList: 00000000ffffffff
+  - Assets/Suriyun/Animations/Anim@Jump.fbx
+  - Assets/Suriyun/Animations/Anim@Atk2.fbx
+  uvOverlapAssetList: 00000000ffffffff0101000001010000
