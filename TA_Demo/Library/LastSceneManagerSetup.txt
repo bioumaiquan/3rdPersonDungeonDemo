@@ -1,4 +1,0 @@
-sceneSetups:
-- path: Assets/My3rdPerson/scene/dungeon.unity
-  isLoaded: 1
-  isActive: 1

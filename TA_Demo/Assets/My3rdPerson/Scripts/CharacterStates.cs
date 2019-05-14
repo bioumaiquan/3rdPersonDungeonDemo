@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[ExecuteAlways]
 public class CharacterStates : MonoBehaviour
 {
     public static Vector3 CharacterPos = Vector3.zero;

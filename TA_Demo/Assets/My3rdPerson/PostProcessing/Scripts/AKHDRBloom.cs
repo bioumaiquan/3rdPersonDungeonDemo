@@ -19,7 +19,7 @@ public class AKHDRBloom
         // fillrate limited platforms
 
         // Determine the iteration count
-        float logh = Mathf.Log(height, 2f) + postSetting.bloomRadius - 9f;
+        float logh = Mathf.Log(height, 2f) + postSetting.bloomRadius - 7f;
         int logh_i = (int)logh;
         int iterations = Mathf.Clamp(logh_i, 1, k_MaxPyramidBlurLevel);
 
@@ -80,7 +80,7 @@ public class AKHDRBloom
         AKPostStuff.rtRelease(prepass);
     }
 
-    float thresholdLinear
+    float ThresholdLinear
     {
         get { return Mathf.GammaToLinearSpace(thre); }
         set { thre = Mathf.LinearToGammaSpace(value); }

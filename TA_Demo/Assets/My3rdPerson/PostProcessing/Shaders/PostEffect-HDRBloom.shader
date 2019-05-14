@@ -83,7 +83,7 @@ Shader "Hidden/PostEffect/FXFastBloom"
 		half4 s0 = SafeHDR(tex2D(_MainTex, uv));
 		half3 m = s0.rgb;
 
-		m = GammaToLinearSpace(m);
+		//m = GammaToLinearSpace(m);
 
 		// Pixel brightness
 		half br = Brightness(m);

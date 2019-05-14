@@ -19,7 +19,7 @@ public class PostProcessingMain : MonoBehaviour
     [Range(0,1), Tooltip("发光的模糊的边缘强度")]
     public float bloomSoftKnee = 0.5f;
 
-    private bool supportDHR;
+    private bool supportHDR;
     private bool bloom;
     bool EnableBloom
     {
@@ -169,7 +169,7 @@ public class PostProcessingMain : MonoBehaviour
         quarterWidth = halfWidth >> 1;
         quarterHeight = halfHeight >> 1;
 
-        supportDHR = SystemInfo.SupportsRenderTextureFormat(RenderTextureFormat.ARGBHalf) ? true : false;
+        supportHDR = SystemInfo.SupportsRenderTextureFormat(RenderTextureFormat.ARGBHalf) ? true : false;
 
         RenderTargetInitializer();
         renderTargetNeedInit = false;
@@ -185,7 +185,7 @@ public class PostProcessingMain : MonoBehaviour
         if (!enableFastBlur)
         {
             EnableMSAA = enableMSAA;
-            EnableBloom = supportDHR ? enableBloom : false;
+            EnableBloom = supportHDR ? enableBloom : false;
 
             if (renderTargetNeedInit)
             {
@@ -204,18 +204,14 @@ public class PostProcessingMain : MonoBehaviour
 
         //后处理
         //FastBlurPass();
-        //BloomPass();
-        //DOFPass();
-        //ColorGradingPass();
-        //VignettePass();
+        BloomPass();
+        DOFPass();
+        ColorGradingPass();
+        VignettePass();
         //Rain();
         //end
 
-        if (p_FinalMat == null)
-        {
-            Debug.LogError("final mat is null");
-        }
-        Graphics.Blit(renderTarget, p_FinalMat);
+        Graphics.Blit(renderTarget, null, p_FinalMat, 0);
     }
 
     private void OnDisable()
@@ -270,13 +266,14 @@ public class PostProcessingMain : MonoBehaviour
 
     void RenderTargetInitializer()
     {
-        RenderTextureFormat rtf = supportDHR ? RenderTextureFormat.ARGBHalf : RenderTextureFormat.ARGB32;
+        RenderTextureFormat rtf = supportHDR ? RenderTextureFormat.ARGBHalf : RenderTextureFormat.ARGB32;
         string msaalevel = aa ? "8xMSAA" : "MSAAoff";
+        string targetname = "RenderTarget_" + msaalevel;
 
         renderTarget = new RenderTexture(fullWidth, fullHeight, 24, rtf, RenderTextureReadWrite.Linear)
         {
-            antiAliasing = aa ? 8 : 2,
-            name = "AKPost_RenderTarget_" + msaalevel,
+            antiAliasing = aa ? 8 : 1,
+            name = "Post_RenderTarget_" + msaalevel,
             filterMode = FilterMode.Bilinear,
             wrapMode = TextureWrapMode.Clamp
         };
@@ -286,7 +283,7 @@ public class PostProcessingMain : MonoBehaviour
     // 光晕
     void BloomPass()
     {
-        if (bloom && p_Bloom.postSetting.bloomIntensity > 0 && !enableFastBlur)
+        if (bloom && p_Bloom.postSetting.bloomIntensity > 0 /*&& !enableFastBlur*/)
         {
             p_BloomMat = AKPostStuff.GetMaterial(p_BloomMat, "Hidden/PostEffect/FXFastBloom");
             p_Bloom.DoBloom(p_FinalMat, p_BloomMat, renderTarget, halfWidth, halfHeight);

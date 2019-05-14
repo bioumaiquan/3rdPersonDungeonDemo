@@ -6028,13 +6028,13 @@ Animator:
   m_LinearVelocityBlending: 0
   m_WarningMessage: "\nBinding warning: Some generic clip(s) animate transforms that
     are already bound by a Humanoid avatar. These transforms can only be changed by
-    Humanoid clips.\n\tTransform 'Jaw_M'\n\tTransform 'Jaw_M'\n\tTransform 'Eye1_R'\n\tTransform
-    'Hair_Root'\n\tTransform 'HeadEnd_M'\n\tTransform 'Eye1_R'\n\tTransform 'Hair_Root'\n\tTransform
-    'HeadEnd_M'\n\tTransform 'Jaw_M'\n\tTransform 'Eye1_R'\n\tand more ...\n\tFrom
-    animation clip 'Cry'\n\tFrom animation clip 'IdleC'\n\tFrom animation clip 'Damage'\n\tFrom
-    animation clip 'DieA'\n\tFrom animation clip 'Angpose'\n\tFrom animation clip
-    'IdleB'\n\tFrom animation clip 'DieB'\n\tFrom animation clip 'Jump'\n\tFrom animation
-    clip 'Cutepose'\n\tFrom animation clip 'Bye'\n\tand more ..."
+    Humanoid clips.\n\tTransform 'Jaw_M'\n\tTransform 'Jaw_M'\n\tTransform 'Hair_Root'\n\tTransform
+    'HeadEnd_M'\n\tTransform 'Hair_Root'\n\tTransform 'HeadEnd_M'\n\tTransform 'Jaw_M'\n\tTransform
+    'Hair_Root'\n\tTransform 'HeadEnd_M'\n\tFrom animation clip 'Atk1'\n\tFrom animation
+    clip 'Idle_A'\n\tFrom animation clip 'Walk'\n\tFrom animation clip 'Walk_back'\n\tFrom
+    animation clip 'Walk_L'\n\tFrom animation clip 'Walk_R'\n\tFrom animation clip
+    'Run'\n\tFrom animation clip 'Run_L'\n\tFrom animation clip 'Run_R'\n\tFrom animation
+    clip 'Jump'\n\tand more ..."
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
@@ -6052,7 +6052,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 90
+  m_Constraints: 112
   m_CollisionDetection: 0
 --- !u!136 &136485451118222308
 CapsuleCollider:
@@ -6085,6 +6085,7 @@ MonoBehaviour:
   jumpInput: 32
   strafeInput: 9
   sprintInput: 304
+  attackInput: 323
   rotateCameraXInput: Mouse X
   rotateCameraYInput: Mouse Y
   customCameraState: 
@@ -6115,6 +6116,7 @@ MonoBehaviour:
   strafeRotationSpeed: 10
   jumpAirControl: 1
   jumpTimer: 0.3
+  jumpDelay: 0.33
   jumpCounter: 0
   jumpForward: 3
   jumpHeight: 4
@@ -6130,6 +6132,7 @@ MonoBehaviour:
   stepSmooth: 4
   slopeLimit: 45
   extraGravity: -10
+  isAttacking: 0
   isGrounded: 0
   isStrafing: 0
   isSprinting: 0

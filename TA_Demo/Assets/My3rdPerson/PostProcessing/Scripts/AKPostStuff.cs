@@ -30,7 +30,7 @@ public class AKPostStuff
         rt.filterMode = FilterMode.Bilinear;
         rt.wrapMode = TextureWrapMode.Clamp;
 
-        rt.name = BuildStringOptimized("AKPostTempBuffer_", name);
+        rt.name = BuildStringOptimized("PostRT", name);
         return rt;
     }
 

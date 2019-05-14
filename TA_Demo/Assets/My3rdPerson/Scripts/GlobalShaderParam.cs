@@ -167,37 +167,31 @@ public class GlobalShaderParam : MonoBehaviour
 
     private void OnEnable()
     {
-        RenderSettings.fog = false;
-        mainlightRotation = new Vector3(90, 0, 0);
+        //RenderSettings.fog = false;
+        //mainlightRotation = new Vector3(90, 0, 0);
         m_Cam = Camera.main;
-        if (m_Cam != null)
-        {
-            characterWorldPos = m_Cam.transform.position;
-            m_Cam.cullingMask = cameraCullingMasks;
-            m_Cam.depth = -2;
-        }
+        //if (m_Cam != null)
+        //{
+        //    characterWorldPos = m_Cam.transform.position;
+        //    m_Cam.cullingMask = cameraCullingMasks;
+        //    m_Cam.depth = -2;
+        //}
 
-        GlobalDepthVariable globalDepthVariable = GetComponent<GlobalDepthVariable>();
-        if (globalDepthVariable != null)
-        {
-            DestroyImmediate(globalDepthVariable);
-        }
-
-        SetFog();
+        //SetFog();
 
         SoftWater = Shader.globalMaximumLOD == 1000 ? SoftOn : false;
         SetWaterDepth();
 
-        SetLightParam();
+        //SetLightParam();
 
-        SetCameraCullDistance();
+        //SetCameraCullDistance();
 
-        SetRainParam();
+        //SetRainParam();
 
-        SceneStateCheck();
+        //SceneStateCheck();
 
-        DisableShadowInGame();
-        QualitySettings.shadows = ShadowQuality.Disable;
+        //DisableShadowInGame();
+        //QualitySettings.shadows = ShadowQuality.Disable;
     }
 
     void LateUpdate ()
@@ -227,20 +221,20 @@ public class GlobalShaderParam : MonoBehaviour
         }
 
         //场景变色相关
-        Shader.SetGlobalFloat(ShaderUniforms.weatherLerp, WeatherLerp);
-        Shader.SetGlobalColor(ShaderUniforms._ColorChangeBefor, colorChangeBefor);
-        Shader.SetGlobalColor(ShaderUniforms._ColorChangeAfter, colorChangeAfter);
+        //Shader.SetGlobalFloat(ShaderUniforms.weatherLerp, WeatherLerp);
+        //Shader.SetGlobalColor(ShaderUniforms._ColorChangeBefor, colorChangeBefor);
+        //Shader.SetGlobalColor(ShaderUniforms._ColorChangeAfter, colorChangeAfter);
 
         SoftWater = Shader.globalMaximumLOD == 1000 ? SoftOn : false;
 
 #if UNITY_EDITOR
-        SetFog();
+        //SetFog();
 
-        SetLightParam();
+        //SetLightParam();
 
-        SetCameraCullDistance();
+        //SetCameraCullDistance();
 
-        SetRainParam();
+        //SetRainParam();
 #endif
     }
 

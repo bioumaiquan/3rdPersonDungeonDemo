@@ -70,6 +70,8 @@
     <Compile Include="Assets\Toon\Editor\RemoveUnusedMaterialProperties.cs" />
     <Compile Include="Assets\Toon\Editor\RemoveUnusedShaderKeywordsFromUTS2Material.cs" />
     <Compile Include="Assets\Toon\Editor\UTS2GUI.cs" />
+    <None Include="Assets\Editor\x64\Bakery\shaderSrc\ftrace.cginc" />
+    <None Include="Assets\Editor\x64\Bakery\ftChecker.shader" />
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>D:/Project/TA_Demo/TA_Demo/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
@@ -701,9 +703,17 @@
       <Project>{B0F070AE-C42E-50A4-7483-1122338ADB59}</Project>
       <Name>QHierarchyEditor</Name>
     </ProjectReference>
+    <ProjectReference Include="BakeryEditorAssembly.csproj">
+      <Project>{AB3F0420-23D4-2056-EF79-930925BAC566}</Project>
+      <Name>BakeryEditorAssembly</Name>
+    </ProjectReference>
     <ProjectReference Include="QHierarchyNullable.csproj">
       <Project>{B1F7E968-3143-1316-EF0B-A8A1B02714CE}</Project>
       <Name>QHierarchyNullable</Name>
+    </ProjectReference>
+    <ProjectReference Include="BakeryRuntimeAssembly.csproj">
+      <Project>{7067BB0A-9153-B5CD-0CE1-BBCE233314A1}</Project>
+      <Name>BakeryRuntimeAssembly</Name>
     </ProjectReference>
     <ProjectReference Include="QHierarchyRuntime.csproj">
       <Project>{CCB24560-783F-F154-442E-42F116500665}</Project>

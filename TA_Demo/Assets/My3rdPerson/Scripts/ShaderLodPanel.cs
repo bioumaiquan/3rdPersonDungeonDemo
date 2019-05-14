@@ -23,16 +23,16 @@ public class ShaderLod
 		Shader.globalMaximumLOD = 300;
 	}
 	
-	[MenuItem("Tools/美术工具/角色皮肤遮罩预览/开")]
-	public static void TurnOnCharacterSkinMask()
-	{
-        Shader.EnableKeyword("CHARACTER_SKIN_MASK");
-	}
+	//[MenuItem("Tools/美术工具/角色皮肤遮罩预览/开")]
+	//public static void TurnOnCharacterSkinMask()
+	//{
+ //       Shader.EnableKeyword("CHARACTER_SKIN_MASK");
+	//}
 	
-	[MenuItem("Tools/美术工具/角色皮肤遮罩预览/关")]
-	public static void TurnOffCharacterSkinMask()
-	{
-        Shader.DisableKeyword("CHARACTER_SKIN_MASK");
-    }
+	//[MenuItem("Tools/美术工具/角色皮肤遮罩预览/关")]
+	//public static void TurnOffCharacterSkinMask()
+	//{
+ //       Shader.DisableKeyword("CHARACTER_SKIN_MASK");
+ //   }
 }
 
