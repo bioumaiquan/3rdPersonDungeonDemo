@@ -398,8 +398,8 @@ ModelImporter:
     - serializedVersion: 16
       name: Jump
       takeName: Aki@Jump
-      firstFrame: 301
-      lastFrame: 356
+      firstFrame: 313
+      lastFrame: 344
       wrapMode: 0
       orientationOffsetY: 0
       level: 0

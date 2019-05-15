@@ -120,7 +120,7 @@ Shader "Hidden/PostEffect/DepthOfField"
 		dof += tex2D(_MainTex, i.uv + duv.zy);
 		dof += tex2D(_MainTex, i.uv + duv.xy);
 		dof /= 4.0;
-		dof = GammaToLinearSpace(dof);
+		//dof = GammaToLinearSpace(dof);
 		
 		return half4(dof, 1);
 	}

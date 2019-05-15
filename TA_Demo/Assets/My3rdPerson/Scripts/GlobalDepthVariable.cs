@@ -30,17 +30,10 @@ public class GlobalDepthVariable : MonoBehaviour
 
     void LateUpdate ()
     {
-        if (Shader.globalMaximumLOD < 1000)
-        {
-            DepthState = false;
-        }
+        if (waterDepth || focusBlurDepth)
+            DepthState = true;
         else
-        {
-            if (waterDepth || focusBlurDepth)
-                DepthState = true;
-            else
-                DepthState = false;
-        }
+            DepthState = false;
     }
 
     void SetCameraDepth()

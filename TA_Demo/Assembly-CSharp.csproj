@@ -86,6 +86,7 @@
     <Compile Include="Assets\My3rdPerson\Scripts\LightScaler.cs" />
     <Compile Include="Assets\My3rdPerson\Scripts\ShaderLodPanel.cs" />
     <Compile Include="Assets\My3rdPerson\Scripts\ShaderUniforms.cs" />
+    <Compile Include="Assets\My3rdPerson\Scripts\WaterReflection.cs" />
     <Compile Include="Assets\Suriyun\Scripts\AnimatorController.cs" />
     <Compile Include="Assets\Suriyun\Scripts\Swapper.cs" />
     <None Include="Assets\Toon\Shader\ToonColor_DoubleShadeWithFeather_StencilMask.shader" />
@@ -95,6 +96,7 @@
     <None Include="Assets\Suriyun\UnityChanShader\Shader\Unitychan_chara_fuku.shader" />
     <None Include="Assets\Toon\Shader\ToonColor_ShadingGradeMap.shader" />
     <None Include="Assets\Toon\Shader\Tess\Toon_ShadingGradeMap_AngelRing_Tess.shader" />
+    <None Include="Assets\My3rdPerson\shader\AK47.cginc" />
     <None Include="Assets\Toon\Shader\Toon_DoubleShadeWithFeather_TransClipping.shader" />
     <None Include="Assets\Toon\Shader\Toon_ShadingGradeMap.shader" />
     <None Include="Assets\Toon\Shader\Toon_ShadingGradeMap_TransClipping_StencilOut.shader" />
@@ -104,6 +106,7 @@
     <None Include="Assets\Toon\Shader\Tess\ToonColor_DoubleShadeWithFeather_Clipping_Tess.shader" />
     <None Include="Assets\Toon\Shader\Toon_OutlineObject_StencilOut.shader" />
     <None Include="Assets\Toon\Shader\Toon_ShadingGradeMap_TransClipping_StencilMask.shader" />
+    <None Include="Assets\My3rdPerson\shader\AK47NewShader-Water.shader" />
     <None Include="Assets\Toon\Shader\Tess\UCTS_ShadingGradeMap_tess.cginc" />
     <None Include="Assets\Toon\Shader\Toon_ShadingGradeMap_AngelRing_TransClipping.shader" />
     <None Include="Assets\Toon\Shader\Tess\Toon_ShadingGradeMap_TransClipping_Tess_StencilOut.shader" />

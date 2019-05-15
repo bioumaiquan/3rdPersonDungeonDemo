@@ -33,11 +33,11 @@ namespace Invector.CharacterController
             jumpCounter = jumpTimer;            
             isJumping = true;
             // trigger jump animations            
-            animator.CrossFadeInFixedTime("Jump", 0.05f);
-            if (_rigidbody.velocity.magnitude < 1)
-                animator.CrossFadeInFixedTime("Jump", 0.05f);
-            else
-                animator.CrossFadeInFixedTime("JumpMove", 0.2f);
+            animator.CrossFadeInFixedTime("Jump", 0.1f);
+            ////if (_rigidbody.velocity.magnitude < 1)
+            ////    animator.CrossFadeInFixedTime("Jump", 0.05f);
+            ////else
+            ////    animator.CrossFadeInFixedTime("JumpMove", 0.2f);
         }
 
         private bool attack = false;
