@@ -84,7 +84,6 @@
     <Compile Include="Assets\My3rdPerson\Scripts\GlobalDepthVariable.cs" />
     <Compile Include="Assets\My3rdPerson\Scripts\GlobalShaderParam.cs" />
     <Compile Include="Assets\My3rdPerson\Scripts\LightScaler.cs" />
-    <Compile Include="Assets\My3rdPerson\Scripts\ShaderLodPanel.cs" />
     <Compile Include="Assets\My3rdPerson\Scripts\ShaderUniforms.cs" />
     <Compile Include="Assets\My3rdPerson\Scripts\WaterReflection.cs" />
     <Compile Include="Assets\Suriyun\Scripts\AnimatorController.cs" />
@@ -216,6 +215,7 @@
     <None Include="Assets\Toon\Shader\Tess\ToonColor_DoubleShadeWithFeather_TransClipping_Tess_StencilMask.shader" />
     <None Include="Assets\Toon\Shader\Tess\Toon_ShadingGradeMap_TransClipping_Tess.shader" />
     <None Include="Assets\Toon\Shader\Toon_DoubleShadeWithFeather_StencilOut.shader" />
+    <None Include="Assets\My3rdPerson\shader\dungeon_light.shader" />
     <None Include="Assets\My3rdPerson\PostProcessing\Shaders\PostEffect-FastBlur.shader" />
     <None Include="Assets\Toon\Shader\Toon_DoubleShadeWithFeather_Mobile_StencilMask.shader" />
     <None Include="Assets\My3rdPerson\PostProcessing\Shaders\PostEffect-GenerateLUT.shader" />

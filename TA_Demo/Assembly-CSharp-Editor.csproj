@@ -60,6 +60,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Editor\ShaderLodPanel.cs" />
     <Compile Include="Assets\Invector-3rdPersonController\Basic Locomotion LITE\Scripts\Camera\Editor\v3rdPersonCameraEditor.cs" />
     <Compile Include="Assets\Invector-3rdPersonController\Basic Locomotion LITE\Scripts\CharacterController\Editor\vCharacterEditor.cs" />
     <Compile Include="Assets\Invector-3rdPersonController\Basic Locomotion LITE\Scripts\CharacterController\Editor\vThirdPersonInputEditor.cs" />

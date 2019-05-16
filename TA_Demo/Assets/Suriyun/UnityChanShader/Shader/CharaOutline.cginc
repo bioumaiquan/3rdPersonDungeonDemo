@@ -46,7 +46,7 @@ struct v2f
 // Minimum and maximum outline thicknesses (Before multiplying by _EdgeThickness)
 // 太さの上限と下限（_EdgeThicknessをかける前の制限）
 #define OUTLINE_NORMAL_SCALE_MIN (0.003)
-#define OUTLINE_NORMAL_SCALE_MAX (0.030)
+#define OUTLINE_NORMAL_SCALE_MAX (0.003)
 
 // Vertex shader
 // 頂点シェーダ
