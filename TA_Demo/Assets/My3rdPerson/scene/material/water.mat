@@ -8,12 +8,12 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: water
-  m_Shader: {fileID: 4800000, guid: b19deee2d32a9054d86c1c13fa3061db, type: 3}
-  m_ShaderKeywords: ENABLE_REFLECTIVE ENABLE_SOFTEDGE
-  m_LightmapFlags: 4
+  m_Shader: {fileID: 4800000, guid: 4a91c9577c91733478297518e0cb57ed, type: 3}
+  m_ShaderKeywords: ENABLE_SOFTEDGE _SECONDARYFOAMALWAYSVISIBLE_ON
+  m_LightmapFlags: 1
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
-  m_CustomRenderQueue: 3000
+  m_CustomRenderQueue: -1
   stringTagMap: {}
   disabledShaderPasses: []
   m_SavedProperties:
@@ -35,8 +35,16 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _DistortionTexture:
+        m_Texture: {fileID: 2800000, guid: a67d2228caf588945b19a42fbd3c3967, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _EmissionMap:
         m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _FoamTexture:
+        m_Texture: {fileID: 2800000, guid: a24ddeee41b659a42b3e031e47a80ae2, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
@@ -66,32 +74,64 @@ Material:
     - _DistortIntensity: 2.14
     - _DstBlend: 0
     - _EdgeFactor: 1.48
+    - _FresnelExp: 1.3690476
     - _FresnelPower: 0.79
     - _GlossMapScale: 1
     - _Glossiness: 0.5
     - _GlossyReflections: 1
+    - _GradientPosition1: 1.2280701
+    - _GradientPosition2: 1.5610572
+    - _LightColorIntensity: 0.201
+    - _MainFoamIntensity: 7.1
+    - _MainFoamOpacity: 0.578
+    - _MainFoamScale: 18.1
+    - _MainFoamSpeed: 1
     - _Metallic: 0
     - _Mode: 0
     - _NormalScale: 0.25
     - _OcclusionStrength: 1
+    - _Opacity: 0.169
+    - _OpacityDepth: 1
     - _Parallax: 0.02
+    - _RealTimeReflection: 1
     - _ReflIntensity: 1
+    - _ReflectionsIntensity: 2
+    - _RefractionIntensity: 1
+    - _Roughness: 0.599
+    - _SecondaryFoamAlwaysVisible: 0
+    - _SecondaryFoamIntensity: 2.330097
+    - _SecondaryFoamOpacity: 0
+    - _SecondaryFoamScale: 40
     - _ShallowAera: 3.47
     - _SmoothnessTextureChannel: 0
     - _SoftEdge: 1
     - _SpecIntensity: 1
     - _SpecPower: 5
     - _SpecularHighlights: 1
+    - _SpecularIntensity: 1
     - _SrcBlend: 1
     - _Transparent: 0.008
+    - _TurbulenceDistortionIntesity: 0.5
+    - _TurbulenceScale: 2
     - _UVSec: 0
+    - _VertexOffset: 1
     - _WaterFog: 0
+    - _WaveDistortionIntensity: 2
+    - _WavesAmplitude: 11.4
+    - _WavesDirection: 163
+    - _WavesIntensity: 0.07
+    - _WavesSpeed: 3
     - _ZWrite: 1
     m_Colors:
     - _Color: {r: 0.4141153, g: 0.81108755, b: 0.8867924, a: 1}
     - _DeepColor: {r: 0, g: 0.1773445, b: 0.4716981, a: 1}
+    - _DepthGradient1: {r: 0.37757304, g: 0.99056596, b: 0.7414576, a: 0}
+    - _DepthGradient2: {r: 0.40731338, g: 0.6572501, b: 0.8113207, a: 0}
+    - _DepthGradient3: {r: 0.14836678, g: 0.23829597, b: 0.49056596, a: 0}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
+    - _FoamColor: {r: 1, g: 1, b: 1, a: 0}
     - _FogDistance: {r: 0, g: 20, b: 0, a: 0}
+    - _FresnelColor: {r: 0.88394445, g: 0.9683824, b: 0.9811321, a: 0}
     - _ShallowColor: {r: 0.009077947, g: 0.5403105, b: 0.6415094, a: 1}
     - _SpecClr: {r: 1, g: 1, b: 1, a: 1}
     - _WaveSpeed: {r: 2, g: 3, b: -1, a: -3}

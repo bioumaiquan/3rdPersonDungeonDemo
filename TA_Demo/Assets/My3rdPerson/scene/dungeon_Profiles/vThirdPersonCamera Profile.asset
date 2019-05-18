@@ -1541,14 +1541,14 @@ MonoBehaviour:
     overrideState: 1
     value: 6
   maximumIterationCount:
-    overrideState: 0
-    value: 16
+    overrideState: 1
+    value: 99
   resolution:
-    overrideState: 0
-    value: 0
+    overrideState: 1
+    value: 2
   thickness:
-    overrideState: 0
-    value: 8
+    overrideState: 1
+    value: 5.4
   maximumMarchDistance:
     overrideState: 1
     value: 15

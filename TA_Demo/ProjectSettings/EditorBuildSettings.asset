@@ -6,6 +6,6 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/My3rdPerson/scene/dungeon.unity
+    path: Assets/My3rdPerson/dungeon.unity
     guid: e0818536a1b65404cbbd904c13a928cd
   m_configObjects: {}
