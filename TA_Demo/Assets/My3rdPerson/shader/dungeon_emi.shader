@@ -32,8 +32,8 @@
                 float2 uv : TEXCOORD0;
                 UNITY_FOG_COORDS(1)
                 float4 vertex : SV_POSITION;
-                half3 worldPos : TEXCOORD2;
                 half3 localPos : TEXCOORD3;
+                half3 worldPos : TEXCOORD4;
             };
 
             sampler2D _MainTex;
@@ -46,8 +46,8 @@
                 v2f o;
                 o.vertex = UnityObjectToClipPos(v.vertex);
                 o.uv = TRANSFORM_TEX(v.uv, _MainTex);
-                o.worldPos = mul(unity_ObjectToWorld, v.vertex).xyz;
                 o.localPos = v.vertex.xyz;
+                o.worldPos = mul(unity_ObjectToWorld, v.vertex.xyz);
                 UNITY_TRANSFER_FOG(o,o.vertex);
                 return o;
             }
@@ -58,15 +58,25 @@
                 fixed4 col = tex2D(_MainTex, i.uv);
 
                 fixed3 emiColor = tex2D(_EmiTex, i.uv) * _EmiColor.rgb;
-                half emiMask = sin(i.worldPos.y + _Time.y * 1.3) * 0.5 + 0.5;
-                half dis = length(sin(i.localPos * 0.5 + half3(2, -3, 0) * _Time.y));
-                dis = pow(dis, 6);
-                emiMask *= dis;
 
-                emiColor *= saturate(emiMask);
+                half cosA, sinA;
+                sincos(_Time.y * 0.1, sinA, cosA); 
+                half3x3 rotMatrix = half3x3(cosA, -sinA, sinA, 
+                                            sinA, cosA, -sinA,
+                                            -sinA, sinA, cosA);
+
+                i.worldPos = mul(rotMatrix, i.worldPos) * 1;
+
+                half3 stickMask = (sin(i.worldPos * 1.5 + _Time.y * half3(1.3, -3, 1)) * 0.5 + 0.5);
+                half stick = stickMask.x * stickMask.y * stickMask.z;
+
+                half dis = length(sin(i.worldPos * 1 + half3(0, -1, 1) * _Time.y));
+                dis = smoothstep(sin(_Time.y * 1.4) * 0.5 + 0.5, sin(_Time.y * 3) * 0.5 + 1.5, dis);
+
+                emiColor *= stick * dis;
 
                 // apply fog
-                return half4(emiColor, 1);
+                return half4((emiColor).rgb, 1);
             }
             ENDCG
         }

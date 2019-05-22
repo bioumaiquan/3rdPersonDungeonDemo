@@ -181,7 +181,7 @@ Shader "Marc Sureda/StylizedWater" {
                 float fresnel = pow(1 - max(0, dot(normalDirection, viewDirection)), _FresnelExp);
                 //half3 refColor = lerp(0.0, (_ReflectionTex_var.rgb * _ReflectionsIntensity), fresnel) * _FresnelColor;
                 half3 refColor = _ReflectionTex_var.rgb * _ReflectionsIntensity;
-                refColor = pow(refColor, 1.5) ;
+                refColor = pow(refColor, 1.5) * saturate(depth);
 
                 //foam
                 float2 foamUV = (_MainFoamSpeed * 0.15 * _Time.y) + (i.uv0 * _MainFoamScale);

@@ -8,13 +8,13 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: scene_common_gate_blue
-  m_Shader: {fileID: 4800000, guid: 849824b290eee0547988f21e7c7ea76a, type: 3}
+  m_Shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
   m_ShaderKeywords: _ _EMISSION _EMISSIVE_SIMPLE _GLOSSYREFLECTIONS_OFF _NORMALMAP
     _OUTLINE_NML _SPECULARHIGHLIGHTS_OFF
   m_LightmapFlags: 1
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
-  m_CustomRenderQueue: 2000
+  m_CustomRenderQueue: -1
   stringTagMap: {}
   disabledShaderPasses: []
   m_SavedProperties:
@@ -286,8 +286,8 @@ Material:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _ColorAddSubDiff: {r: 0, g: 0, b: 0, a: 0}
     - _ColorShift: {r: 0, g: 0, b: 0, a: 1}
-    - _EmiColor: {r: 1.6313726, g: 3.3882353, b: 5.992157, a: 1}
-    - _EmissionColor: {r: 0.09656035, g: 1.2166604, b: 1.8443027, a: 1}
+    - _EmiColor: {r: 1.1535546, g: 2.3958442, b: 4.237095, a: 1}
+    - _EmissionColor: {r: 0.15686275, g: 1.9764706, b: 2.9960785, a: 1}
     - _Emissive_Color: {r: 0, g: 0, b: 0, a: 1}
     - _HighColor: {r: 0, g: 0, b: 0, a: 1}
     - _MatCapColor: {r: 1, g: 1, b: 1, a: 1}

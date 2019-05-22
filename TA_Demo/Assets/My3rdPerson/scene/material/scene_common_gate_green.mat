@@ -52,6 +52,10 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _EmiTex:
+        m_Texture: {fileID: 2800000, guid: 3d28d06129a981d47aab3cbf897971ae, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _EmissionMap:
         m_Texture: {fileID: 2800000, guid: 3d28d06129a981d47aab3cbf897971ae, type: 3}
         m_Scale: {x: 1, y: 1}
@@ -282,7 +286,8 @@ Material:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _ColorAddSubDiff: {r: 0, g: 0, b: 0, a: 0}
     - _ColorShift: {r: 0, g: 0, b: 0, a: 1}
-    - _EmissionColor: {r: 0.090094, g: 1.7207954, b: 0.2162256, a: 1}
+    - _EmiColor: {r: 0.87468857, g: 6.8679247, b: 1.540604, a: 1}
+    - _EmissionColor: {r: 0.15686275, g: 2.9960785, b: 0.3764706, a: 1}
     - _Emissive_Color: {r: 0, g: 0, b: 0, a: 1}
     - _HighColor: {r: 0, g: 0, b: 0, a: 1}
     - _MatCapColor: {r: 1, g: 1, b: 1, a: 1}

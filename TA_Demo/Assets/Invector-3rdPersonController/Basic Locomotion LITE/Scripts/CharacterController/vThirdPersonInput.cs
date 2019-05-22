@@ -118,9 +118,13 @@ namespace Invector.CharacterController
         #region Basic Locomotion Inputs      
 
         protected virtual void MoveCharacter()
-        {            
+        {
             cc.input.x = Input.GetAxis(horizontalInput);
             cc.input.y = Input.GetAxis(verticallInput);
+            if (Input.GetKey(KeyCode.LeftControl))
+            {
+                cc.input *= new Vector2(0.5f, 0.5f);
+            }
         }
 
         protected virtual void StrafeInput()
